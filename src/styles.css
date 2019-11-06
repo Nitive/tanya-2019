@@ -1,0 +1,23 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.answer {
+  display: block;
+}
+
+.hint {
+  font-size: 14px;
+  height: 16px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 23px;
+}
+
+.answer.correct .hint {
+  color: #007247;
+}
+
+.answer.incorrect .hint {
+  color: red;
+}

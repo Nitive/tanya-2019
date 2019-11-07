@@ -4,4 +4,4 @@ dev:
 
 .PHONY: build
 build:
-	yarn parcel build src/index.html
+	yarn parcel build src/index.html -d docs

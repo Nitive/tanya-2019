@@ -4,4 +4,4 @@ dev:
 
 .PHONY: build
 build:
-	yarn parcel build src/index.html -d docs
+	yarn parcel build src/index.html -d docs --public-url /tanya-2019

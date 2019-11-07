@@ -55,7 +55,7 @@ function Question(props) {
           {props.children}
         </div>
         {isAnswered && (
-          <button type='button' className='next-question' onClick={goToNextQuestion}>
+          <button type='button' class='button next-question' onClick={goToNextQuestion}>
             Следующий вопрос
           </button>
         )}
@@ -68,7 +68,7 @@ const questions = [
   {
     id: 'important_at_work',
     node: (
-      <Question title='Что для Тани главное в работе?' id='important_at_work'>
+      <Question title='Что для Тани главное в работе?' id='important_at_work'>
         <Answer hint='Нет, Таня не работает в геймдеве' id='80_hours'>
           Возможность работать не менее 80 часов в неделю
         </Answer>
@@ -104,36 +104,11 @@ const questions = [
         <Answer hint='Близко, но нет' id='maxim'>
           Максим
         </Answer>
-        <Answer hint='Ам колин зе полис' id='tanya'>
+        <Answer hint='Айм колин зе полис' id='tanya'>
           Таня
         </Answer>
         <Answer hint='Ещё бы! Только Максиму не говорите' correct id='berta'>
           Берта
-        </Answer>
-      </Question>
-    ),
-  },
-  {
-    id: 'coffee',
-    node: (
-      <Question title='Любимый кофе Тани?' id='coffee'>
-        <Answer
-          hint='максим ты нормальный вообще что за вопрос и вообще это страны а не сорта в одной стране могуть быть разные сорта не шариш штоле'
-          id='brazil'
-        >
-          Бразилия
-        </Answer>
-        <Answer
-          hint='максим ты нормальный вообще что за вопрос и вообще это страны а не сорта в одной стране могуть быть разные сорта не шариш штоле'
-          id='ethiopia'
-        >
-          Эфиопия
-        </Answer>
-        <Answer
-          hint='максим ты нормальный вообще что за вопрос и вообще это страны а не сорта в одной стране могуть быть разные сорта не шариш штоле'
-          id='kenya'
-        >
-          Кения
         </Answer>
       </Question>
     ),
@@ -158,26 +133,153 @@ const questions = [
       </Question>
     ),
   },
+  {
+    id: 'free_time',
+    node: (
+      <Question title='Что Таня любит делать на досуге?' id='free_time'>
+        <Answer hint='Разве что Таня из параллельной вселенной' id='clubs'>
+          Ходить в клубы
+        </Answer>
+        <Answer
+          hint='Любить кататься на велосипеде легко, а действительно делать это...'
+          id='bicycle'
+        >
+          Кататься на велосипеде
+        </Answer>
+        <Answer
+          correct
+          hint='Однажды Таня в приступе шопогольничества купила чайник с тонким носиком. Лучшая покупка в жизни Максима'
+          id='shoping'
+        >
+          Покупать всякое
+        </Answer>
+      </Question>
+    ),
+  },
+  {
+    id: 'favorite_character',
+    node: (
+      <Question title='Какой персонаж нравится Тане меньше всех?' id='favorite_character'>
+        <Answer hint='За Пингвина и двор стреляем в упор' id='penguin'>
+          Пингвин из Готема
+        </Answer>
+        <Answer hint='Очень вкусно, но нет' id='gannibal'>
+          Ганнибал Лектер
+        </Answer>
+        <Answer
+          hint='There is always a possibilty for unlikely events to take place, but not this time'
+          id='konnor'
+        >
+          Андроид Коннор
+        </Answer>
+        <Answer correct hint='Yuuuuusss!' id='jake'>
+          Jake the Dog
+        </Answer>
+      </Question>
+    ),
+  },
+  {
+    id: 'coffee',
+    node: (
+      <Question title='Любимый кофе Тани?' id='coffee'>
+        <Answer
+          hint='максим ты нормальный вообще что за вопрос и вообще это страны а не сорта в одной стране могуть быть разные сорта не шариш штоле этот вопрос не считается'
+          id='brazil'
+        >
+          Бразилия
+        </Answer>
+        <Answer
+          hint='максим ты нормальный вообще что за вопрос и вообще это страны а не сорта в одной стране могуть быть разные сорта не шариш штоле этот вопрос не считается'
+          id='ethiopia'
+        >
+          Эфиопия
+        </Answer>
+        <Answer
+          hint='максим ты нормальный вообще что за вопрос и вообще это страны а не сорта в одной стране могуть быть разные сорта не шариш штоле этот вопрос не считается'
+          id='kenya'
+        >
+          Кения
+        </Answer>
+      </Question>
+    ),
+  },
+  {
+    id: 'book',
+    node: (
+      <Question title='Любимая книга детства?' id='book'>
+        <Answer hint='Неа, но с вампирами наверняка как-то связанно' id='job_interview'>
+          Собеседование с вампиром
+        </Answer>
+        <Answer hint='Именно!' correct id='interview'>
+          Интервью с вампиром
+        </Answer>
+        <Answer hint='Неа, но с вампирами наверняка как-то связанно' id='talk'>
+          Разговор с вампиром
+        </Answer>
+      </Question>
+    ),
+  },
+  {
+    id: 'google',
+    node: (
+      <Question title='Как Таня узнала о существовании Гугла?' id='google'>
+        <Answer hint='А ю сириос?' id='google_search'>
+          Нагуглила
+        </Answer>
+        <Answer hint='true' correct id='course'>
+          На компьютерных курсах
+        </Answer>
+        <Answer hint='Не было такого' id='in_school'>
+          Рассказала одноклассница
+        </Answer>
+      </Question>
+    ),
+  },
+  {
+    id: 'rapper',
+    node: (
+      <Question title='Топ 1 реперов' id='rapper'>
+        <Answer hint='Риал ток!' id='slava' correct>
+          Слава КПСС
+        </Answer>
+        <Answer hint='Да она просто угарает с этой лысой карлицы' id='oxy'>
+          Оксимирон
+        </Answer>
+        <Answer hint='Не-а, Таня не фанал гострайтера с Фрэшблада' id='hovan'>
+          Хованский
+        </Answer>
+      </Question>
+    ),
+  },
 ]
 
 function Results({ answers }) {
+  const maxCorrectCount = answers.length - 1
   const correctCount = answers.filter(answer => answer.correct).length
-  const count = `${correctCount}/${answers.length}`
+  const count = `${correctCount}/${maxCorrectCount}`
   const reload = () => location.reload()
   const result =
-    correctCount === answers.length ? (
-      'Ты эксперт по Тане'
+    maxCorrectCount === correctCount ? (
+      <div>
+        Ты эксперт по Тане. Продолжай в том же духе
+        <img class='berta-img' src={require('./images/good.jpeg')} alt='Берта' />
+      </div>
     ) : (
-      <Fragment>
-        Ты не шаришь.{' '}
-        <button type='button' onClick={reload}>
-          Пройти ещё раз
-        </button>
-      </Fragment>
+      <div>
+        Ты не шаришь в Тане. Остаёшься на второй год. Не пересылай друзьям, чтобы они не знали
+        о твоём позоре.
+        <img class='berta-img' src={require('./images/bad.jpg')} alt='Берта' />
+        <div>
+          <br />
+          <button class='button' type='button' onClick={reload}>
+            Пройти ещё раз
+          </button>
+        </div>
+      </div>
     )
 
   return (
-    <div class='app'>
+    <div class='app results'>
       <p>Счёт: {count}.</p>
       <p>Результат: {result}</p>
     </div>
@@ -207,7 +309,7 @@ function App() {
   return (
     <AppContext.Provider value={globalApi} key={currentQuestion.id}>
       <div class='app'>
-        <h1>Игра «Знаешь ли ты Таню»</h1>
+        <h1 class='main-title'>Игра «Знаешь ли ты Таню»</h1>
         <div class='play-block'>{currentQuestion.node}</div>
       </div>
     </AppContext.Provider>

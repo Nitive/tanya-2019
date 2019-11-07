@@ -4,6 +4,13 @@ body {
   color: #1f1a47;
 }
 
+@media (max-width: 500px) {
+  .main-title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .app {
   max-width: 600px;
   margin-top: 50px;
@@ -16,6 +23,13 @@ body {
   padding: 10px 50px 40px;
   background-color: #f7f8f9;
   border-radius: 4px;
+}
+
+@media (max-width: 500px) {
+  .play-block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .question {
@@ -38,8 +52,9 @@ body {
 }
 
 .answer input {
-  margin-top: 4px;
+  margin-top: 5px;
   margin-right: 15px;
+  align-self: flex-start;
 }
 
 .answer.correct .hint {
@@ -52,6 +67,9 @@ body {
 
 .next-question {
   margin-top: 20px;
+}
+
+.button {
   border: 0;
   background: #32325d;
   height: 40px;
@@ -60,4 +78,16 @@ body {
   border-radius: 4px;
   color: white;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .results {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.berta-img {
+  margin-top: 20px;
+  width: 100%;
 }
